@@ -1,0 +1,23 @@
+@use '../../partials/utils/mixins' as *;
+@use '../../partials/utils/variables' as *;
+
+.layout {
+  position: relative;
+  min-height: 100vh;
+  font-family: $body-font-family;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  main {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 30px 185px;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    @include mobile {
+    padding-top: 0;
+    }
+  }
+}

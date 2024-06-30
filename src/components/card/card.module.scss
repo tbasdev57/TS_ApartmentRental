@@ -1,0 +1,53 @@
+@use '../../../partials/utils/mixins' as *;
+
+.card {
+  width: 100%;
+  height: 330px;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s linear;
+  transform: scale(1);
+  @media only screen and (max-width: 860px) {
+    flex-grow: 1;
+    height: 450px;
+  }
+  @include mobile {
+    border-radius: 18px;
+  }
+  &:hover,
+  &:focus {
+    transition: all 0.1s linear;
+    transform: scale(1.015);
+    box-shadow: 3px 9px 10px #ddd;
+    opacity: 0.8;
+  }
+  &:active {
+    transform: scale(1);
+    box-shadow: none;
+    transition: all 0.05s linear;
+  }
+  .img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .title {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    bottom: 0;
+    color: white;
+    padding: 20px 15px;
+    background: rgba(0, 0, 0, 0.3);
+    @include mobile {
+    font-size: 1.3rem;
+    }
+  }
+}
+.fadein {
+  opacity: 1;
+}

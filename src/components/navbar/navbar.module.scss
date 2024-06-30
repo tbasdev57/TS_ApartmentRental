@@ -1,0 +1,28 @@
+@use '../../../partials/utils/variables' as *;
+@use '../../../partials/utils/mixins' as *;
+
+.navbar {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .link {
+    &:last-child {
+      margin-left: 57px;
+      @include mobile {
+        margin-left: 40px;
+      }
+    }
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+    .active {
+      text-decoration: underline;
+    }
+  }
+}

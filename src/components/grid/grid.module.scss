@@ -1,0 +1,37 @@
+@use '../../../partials/utils/mixins' as *;
+
+.grid {
+  background: #f6f6f6;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 50px;
+  border-radius: 25px;
+  * {
+    justify-self: center;
+    flex-grow: 1;
+    @media only screen and (min-width: 1240px) {
+      flex-grow: 0;
+    }
+    @media only screen and (max-width: 860px) {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 860px) {
+    background: #fff;
+    padding: 0 0 50px;
+  }
+  @include mobile {
+    gap: 25px;
+  }
+}
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  padding-bottom: 50px;
+  font-size: 1.5rem;
+  color: red;
+}

@@ -1,0 +1,10 @@
+@use '../../../partials/utils/variables' as *;
+
+.loadingText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  font-size: 1.5rem;
+  color: $primary-color;
+}
